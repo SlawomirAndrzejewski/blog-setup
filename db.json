@@ -1,0 +1,14 @@
+{
+  "posts": [
+      {
+          "id": 1,
+          "title": "Tomato sauce",
+          "body": "How to make the best tomato sauce in the entire world!"
+      },
+      {
+          "id": 2,
+          "title": "Tomato sauce",
+          "body": "How to make the best tomato sauce in the entire world!"
+      }
+  ]
+}

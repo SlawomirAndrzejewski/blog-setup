@@ -3,12 +3,22 @@
       {
           "id": 1,
           "title": "Tomato sauce",
-          "body": "How to make the best tomato sauce in the entire world!"
+          "body": "How to make the best tomato sauce in the entire world!",
+          "tags": [
+            "onions", 
+            "tomato", 
+            "garlic"
+          ]
       },
       {
           "id": 2,
           "title": "Tomato sauce",
-          "body": "How to make the best tomato sauce in the entire world!"
+          "body": "How to make the best tomato sauce in the entire world!",
+          "tags": [
+            "onions", 
+            "tomato", 
+            "garlic"
+          ]
       }
   ]
 }

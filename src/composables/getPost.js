@@ -1,30 +1,29 @@
 import { ref } from "vue"
 
-const getPosts = () => {
-    const posts = ref([])
+const getPost = (id) => {
+    const post = ref(null)
     const error = ref(null)
 
     const load = async () => {
-
         try {
             //simulate delay
             await new Promise(resolve => {
                 setTimeout(resolve, 1000)
             })
 
-            let data = await fetch('http://localhost:3000/posts')
+            let data = await fetch('http://localhost:3000/posts/' + id)
             if (!data.ok) {
-                throw Error('no data available')
+                throw Error('That post does not exist')
             }
-            posts.value = await data.json()
+            post.value = await data.json()
         }
 
-        catch (err) {
+        catch(err) {
             error.value = err.message
         }
     }
 
-    return { posts, error, load }
+    return { post, error, load } 
 }
 
-export default getPosts
+export default getPost

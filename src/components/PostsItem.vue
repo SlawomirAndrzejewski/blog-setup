@@ -17,7 +17,7 @@ export default {
     props: ['post'],
     setup(props) {
         const snippet = computed(() => {
-            return props.post.body.substring(0, 100) + ' ...'
+            return props.post.body.substring(0, 250) + ' ...'
         })
 
         return { snippet }
@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .post {
     margin: 0 40px 30px;
     padding-bottom: 30px;

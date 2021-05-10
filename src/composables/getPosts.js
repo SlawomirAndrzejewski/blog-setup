@@ -13,7 +13,7 @@ const getPosts = () => {
             //     setTimeout(resolve, 1000)
             // })
 
-            const res = await projectFirestore.collection('posts').get()
+            const res = await projectFirestore.collection('posts').orderBy('createdAt').get()
             posts.value = res.docs.map(doc => {
                 return { ...doc.data(), id: doc.id }
             })
